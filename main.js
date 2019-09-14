@@ -1,12 +1,12 @@
-function add_subtitle(s) {
+function update_subtitle(s) {
   var element_list = s.trim().split(' ');
   $('#subtitle').empty();
-  for (var x of element_list) {
-    var tag = `<span contenteditable class="subtitle-element">${x}</span>`;
+  for (var [i, v] of element_list.entries()) {
+    var tag = `<span contenteditable id="tag-${i}" class="subtitle-element">${v}</span>`;
     $('#subtitle').append(tag);
   }
 }
 
 $(function() {
-  add_subtitle("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
+  update_subtitle("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
 });
