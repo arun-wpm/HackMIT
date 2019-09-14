@@ -7,13 +7,14 @@
           src="https://code.jquery.com/jquery-3.4.1.min.js"
           integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
           crossorigin="anonymous"></script>
+        <script src="lib/vtt.min.js"></script>
         <script src="main.js"></script>
 
         <style>
           .subtitle-element {
               margin-left: 5px;
               font-size: 1.2em;
-              transition: 0.3s;
+              transition: 0.8s;
           }
 
           .subtitle-element:hover {
@@ -25,26 +26,26 @@
     <body>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">LectHub (CrowdLec)</a>
+                <a class="navbar-brand" href="browse.html">LectHub (CrowdLec)</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">6.009 Fundamentals of Programming</a>
+                            <a class="nav-link" href="browse.html">6.009 Fundamentals of Programming</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <div class="jumbotron jumbotron-fluid p-2">
+            <div class="jumbotron jumbotron-fluid">
                 <h1 class="display-4">Title!</h1>
                 <p class="lead">This is the description for the video.</p>
                 <hr class="my-4">
 
                 <div class="row justify-content-center">
                   <div class="col-11 bg-dark">
-                    <video width="100%" align="middle" controls>
+                    <video id="vid" width="100%" align="middle" controls>
                         <source src="videos/test.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                     </video>
@@ -53,7 +54,7 @@
 
                 <div class="row justify-content-center mt-4">
                   <div id="subtitle" class="col-11 bg-light p-2">
-                    <span contenteditable class="subtitle-element">abcd</span>
+                    <span contenteditable class="subtitle-element">Subtitle goes here!</span>
                   </div>
                 </div>
             </div>
