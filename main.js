@@ -7,6 +7,6 @@ function add_subtitle(s) {
   }
 }
 
-$.ready(() => {
+$(function() {
   add_subtitle("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
 });
