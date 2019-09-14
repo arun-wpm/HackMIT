@@ -1,4 +1,4 @@
-var vtt = "WEBVTT\n\n1\n00:00.000 --> 00:02.000\n[Music]\n\n1\n00:02.500 --> 00:04.000\ndu du du du DUH DUH!",
+var vtt = "WEBVTT\n\n1\n00:00.000 --> 00:20.000\n[Music]\n\n1\n00:20.500 --> 00:40.000\ndu du du du DUH DUH! $O(n\\log{n})$",
     parser = new WebVTT.Parser(window, WebVTT.StringDecoder()),
     cues = [],
     regions = [];
@@ -19,6 +19,8 @@ function update_subtitle(s) {
         var tag = `<span contenteditable id="tag-${i}" onclick="pause();" class="subtitle-element">${v}</span>`;
         $('#subtitle').append(tag);
     }
+
+    MathJax.typeset()
 }
 
 function pause() {
